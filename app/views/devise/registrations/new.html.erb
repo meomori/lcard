@@ -1,0 +1,57 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <%= f.text_field :name, placeholder: "Your Full Name", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :email, placeholder: "Your Email", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :location, placeholder: "Your Current Location", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :phone, placeholder: "Your Phone Number", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :github, placeholder: "Your GitHub Profile", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :linkedin, placeholder: "Your LinkedIn Profile", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :website, placeholder: "Your Website/Portfolio", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <strong>Upload a Profile Pic:</strong>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

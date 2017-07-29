@@ -1,0 +1,15 @@
+<h1><%= current_user.name %>'s Contacts</h1>
+<p>Here is a list of all your links:</p>
+
+<div>
+	<% @following_professionals.each do |contact| %>
+		<div>
+			<p><%= contact.user.name %></p>
+			<p><%= contact.user.phone %></p>
+			<p><%= contact.user.email %></p>
+			<p><%= contact.user.github %></p>
+			<p><%= contact.user.linkedin %></p>
+			<p><%= contact.user.website %></p>
+		</div>
+	<% end %>
+</div>

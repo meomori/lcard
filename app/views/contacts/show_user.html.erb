@@ -1,0 +1,18 @@
+<h1><%= @user.name %>'s Contact Information</h1>
+
+<p><%= @user.name %></p>
+<p><%= @user.phone %></p>
+<p><%= @user.email %></p>
+<p><%= @user.github %></p>
+<p><%= @user.linkedin %></p>
+<p><%= @user.website %></p>
+
+<p>
+    <% if current_user.following.include?(@user.id) %>
+        <%= link_to "Unlink", unlink_path(id: @user.id), class: "btn btn-danger" %>
+    <% else %>
+        <% if current_user.id != @user.id %>
+	    <%= link_to "Link", now_linked_path(id: @user.id), class: "btn btn-primary" %>
+	<% end %>
+    <% end %>
+</p>

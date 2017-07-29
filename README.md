@@ -1,24 +1,7 @@
-# README
+This is a personal project written in Ruby on Rails, using HTML5/CSS3 and JavaScript.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The LCard attempts to make exchanging contacts easier but still have the joy of personalizing and collecting business cards.
 
-Things you may want to cover:
+The LCard allows you to store contact information of people you meet in both social and professional settings.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The project was started as a personal project for a coding bootcamp but is now a project that I want to improve on.

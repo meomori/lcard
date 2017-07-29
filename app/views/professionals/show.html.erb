@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+  <% @users.each do |link| %>
+    <div>
+      <p><%= link.name %></p>
+      <p><%= link.phone %></p>
+      <p><%= link.email %></p>
+      <p><%= link.github %></p>
+      <p><%= link.linkedin %></p>
+      <p><%= link.website %></p>
+    </div>
+  <% end %>
+</div>
